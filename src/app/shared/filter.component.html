@@ -1,0 +1,27 @@
+
+<div class="container text-center">
+    <div class="row justify-content-start">
+        <div class="col-6">
+            
+            <div class="form-floating mb-3">
+                <input type="text" #search class="form-control" [formControl]="searchControl">
+                <label for="search">Type same text to filter posts</label>
+            </div>
+
+        </div>
+        <div class="col-6">
+           
+            <div class="form-floating">
+                <select class="form-select" id="floatingSelect" (change)="onNumItemsSelected($any($event).target.value)"
+                    aria-label="Floating label select example">
+                  <option selected value="0">All items</option>
+                  <option value="5">Top 5</option>
+                  <option value="10">Top 10</option>
+                  <option value="50">Top 50</option>
+                </select>
+                <label for="floatingSelect">Select number of displayed items</label>
+            </div>
+
+        </div>
+    </div>
+</div>
