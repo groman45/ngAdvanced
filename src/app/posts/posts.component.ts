@@ -5,12 +5,13 @@ import { IPost } from './models/post';
 import { filter, from, map, Observable, Subscription, tap, mergeMap } from "rxjs";
 import { FormControl } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FilterComponent } from '../shared/filter.component'
+import { FilterComponent } from '../shared/filter/filter.component'
+import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-posts',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, FilterComponent],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, FilterComponent, RouterModule],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.scss'
 })
@@ -23,7 +24,7 @@ export class PostsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {   
-    this.getDataFromService('', 0);   
+    this.getDataFromService('', 5);   
   }
 
   ngOnDestroy(): void {

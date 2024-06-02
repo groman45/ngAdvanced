@@ -1,0 +1,37 @@
+<section class="vh-100">
+    <div class="container py-5 ">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-12 col-xl-12">
+                <div class="card rounded-3" style="margin-bottom: 10px;">
+
+
+                    <div class="p-4">
+                        <div>
+                            <h4 class="text-center my-3 pb-3">Post details:</h4>
+
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Id</th>
+                                        <td>{{ post?.id }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Title</th>
+                                        <td>{{ post?.title }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Body</th>
+                                        <td>{{ post?.body }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <p><a class="link-opacity-75-hover"  [routerLink]="['../']">Back to Posts list</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

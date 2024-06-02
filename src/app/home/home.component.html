@@ -1,0 +1,30 @@
+<section class="vh-100">
+    <div class="container py-5 ">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-12 col-xl-12">
+                <div class="card rounded-3" style="margin-bottom: 10px;">
+                    
+                    
+                    <div class="p-4">
+                        <div>
+                        <h4 class="text-center my-3 pb-3">Home:</h4>
+                        <h5>Next settings allow or disallow Post route. </h5><br/>
+                        <label>To test it: try navigate by "Post" main menu item with different settings.</label>                           
+                       
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox"
+                                [(ngModel)]="postsPermissionsService.AllowPostsRoute" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Permission for Post route (checked = allow it)
+                            </label>
+                        </div>
+                    </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

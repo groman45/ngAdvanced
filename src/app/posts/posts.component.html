@@ -1,22 +1,41 @@
-<h4 class="text-center my-3 pb-3">Posts:</h4>
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-12 col-xl-12">
+        <div class="card rounded-3" style="margin-bottom: 10px;">
+          <div class="card-body p-4">
 
-<app-filter (FilterChanged)="getDataFromService($event.filterTxt, $event.numberOfItems)"></app-filter>
 
-<table class="table mb-4">
-    <thead>
-      <tr>
-        <th scope="col">Id</th>        
-        <th scope="col">Title</th>
-        <th scope="col">Body</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let post of posts">
-        <th scope="row">{{post.id}}</th>     
-        <td>{{post.title}}</td>
-        <td>{{post.body}}          
-        </td>
-      </tr>
+            <h4 class="text-center my-3 pb-3">Posts:</h4>
+            <app-filter (FilterChanged)="getDataFromService($event.filterTxt, $event.numberOfItems)"></app-filter>
 
-    </tbody>
-  </table>
+            <table class="table mb-4">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Body</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let post of posts">
+                  <th scope="row">{{post.id}}</th>
+                  <td>{{post.title}}</td>
+                  <td>{{post.body}}</td>
+                  <td><button class="btn btn-outline-primary btn-table ml-1" 
+                    [routerLink]="['/posts', post.id]"
+                    >Details</button></td>
+                </tr>
+
+              </tbody>
+            </table>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
