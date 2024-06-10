@@ -9,13 +9,11 @@ import { FilterComponent } from '../shared/filter/filter.component'
 import {RouterModule} from '@angular/router';
 
 @Component({
-  selector: 'app-posts',
-  standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, FilterComponent, RouterModule],
-  templateUrl: './posts.component.html',
-  styleUrl: './posts.component.scss'
+  selector: 'app-posts',  
+  templateUrl: './posts-index.component.html',
+  styleUrl: './posts-index.component.scss'
 })
-export class PostsComponent implements OnInit, OnDestroy {  
+export class PostsIndexComponent implements OnInit, OnDestroy {  
 
   posts: IPost[] | undefined;
   subscription: Subscription | undefined;  

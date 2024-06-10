@@ -7,8 +7,6 @@ import { IPost } from '../models/post';
 
 @Component({
   selector: 'app-post-detail',
-  standalone: true,
-  imports: [RouterModule],
   templateUrl: './post-detail.component.html',
   styleUrl: './post-detail.component.scss'
 })

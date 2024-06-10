@@ -8,6 +8,23 @@ import {PostsGuard} from './posts/permission/posts-guard'
 export const routes: Routes = [ 
     {path: '', component: HomeComponent},
     {
+        path: 'todos',        
+        loadChildren: () =>
+            import('./todos/todos.module').then(
+                (mod) => mod.TodosModule
+            ),           
+    },
+    {
+        path: 'posts',        
+        loadChildren: () =>
+            import('./posts/posts.module').then(
+                (mod) => mod.PostsModule
+            ),           
+    },
+
+    // For standalone components
+    /*
+    {
         path: 'posts', 
         canActivate: mapToCanActivate([PostsGuard]),
         canActivateChild: mapToCanActivate([PostsGuard]),
@@ -22,6 +39,6 @@ export const routes: Routes = [
         import('./posts/post-details/post-detail.component').then(
              (mod) => mod.PostDetailComponent
         )        
-    },
+    }, */
     { path: '**', pathMatch: 'full', component: NotFoundComponent }
 ];

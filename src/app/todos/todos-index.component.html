@@ -1,0 +1,41 @@
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-12 col-xl-12">
+                <div class="card rounded-3" style="margin-bottom: 10px;">
+                    <div class="card-body p-4">
+                        <h4 class="text-center my-3 pb-3">Todos list:</h4>
+
+
+
+                        <ng-container *ngIf="data$ | async as state">
+
+                            <table class="table mb-4">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">completed</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let todo of state">
+                                        <th scope="row">{{todo.id}}</th>
+                                        <td>{{todo.title}}</td>
+                                        <td>{{todo.completed}}</td>
+                                        <td><button class="btn btn-outline-primary btn-table ml-1"
+                                                [routerLink]="['/todos', todo.id]">Details</button></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </ng-container>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

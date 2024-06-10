@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NavBarComponent } from '../app/shared/nav-bar/nav-bar.component'
+import { SharedModule } from './shared/shared.module'
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgbModule, NavBarComponent],
+  imports: [RouterOutlet, NgbModule, SharedModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
