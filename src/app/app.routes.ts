@@ -8,13 +8,6 @@ import {PostsGuard} from './posts/permission/posts-guard'
 export const routes: Routes = [ 
     {path: '', component: HomeComponent},
     {
-        path: 'todos',        
-        loadChildren: () =>
-            import('./todos/todos.module').then(
-                (mod) => mod.TodosModule
-            ),           
-    },
-    {
         path: 'posts',        
         loadChildren: () =>
             import('./posts/posts.module').then(
