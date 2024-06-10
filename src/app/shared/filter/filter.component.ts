@@ -9,9 +9,7 @@ export interface FilterComponentEventArgs {
 }
 
 @Component({
-  selector: 'app-filter',
-  standalone: true,
-  imports: [CommonModule, FormsModule,  ReactiveFormsModule],
+  selector: 'app-filter',  
   templateUrl: './filter.component.html',
   styleUrl: './filter.component.scss'
 })
